@@ -61,7 +61,7 @@ func init() {
 		fmt.Println("cmd2 start err", err)
 		return
 	}
-	err = studio2.Close() //关闭 通道   因为 通道是单向的
+	err = studio2.Close() //关闭 通道   因为  部分命令 会等待 结束 所以手动关闭
 	if err != nil {
 		fmt.Println("close cmd2 err ", err)
 		return
